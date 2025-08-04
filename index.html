@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpiderMaria</title>
+  <title>˚ʚ♡ɞ˚ Myra ˚ʚ♡ɞ˚</title>
   <style>
     html, body {
       touch-action: manipulation;
@@ -14,7 +14,7 @@
     body {
       font-family: sans-serif;
       padding: 16px;
-      background: #32CD32;
+      background: #f0f0f0;
     }
     .user-row {
       background: white;
@@ -35,12 +35,12 @@
       padding: 10px;
       border: none;
       border-radius: 6px;
-      background: #90EE90;
+      background: #ADD8E6;
       color: white;
       cursor: pointer;
     }
     button:hover {
-      background: #006400;
+      background: #005fc1;
     }
     .nav-btn {
       padding: 20px 15px;
@@ -128,74 +128,6 @@
       margin-bottom: 8px;
       cursor: pointer;
     }
-
-    .floating-btn, .floating-span, .floating-checkbox {
-      position: fixed;
-      background: #90EE90;
-      padding: 16px;
-      font-size: 26px;
-      border-radius: 50px;
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* REMOVE SHADOW to eliminate edge artifacts */
-      z-index: 999;
-      text-align: center;
-      user-select: none;
-      touch-action: none;
-      margin: 0; /* Prevent any margin spacing */
-      border: none; /* Avoid any border causing bleed */
-      box-sizing: border-box;
-      transform: translateZ(0); /* Force GPU rendering to fix sub-pixel issues */
-    }
-
-    #btnPrev {
-    bottom: 50px;
-    right: 100px;
-    }
-    
-    #btnNext {
-      bottom: 50px;
-      right: 10px;
-    }
-    
-    #btnIG {
-      bottom: 210px;
-      right: 10px;
-    }
-    
-    #currentUsername {
-      position: fixed;
-      bottom: 130px;
-      right: 110px;
-      background: #006400;
-      padding: 6px 15px;
-      border-radius: 8px;
-      box-shadow: none;
-      transform: translateZ(0);
-    }
-    
-    #currentCheckbox {
-      position: fixed;
-      bottom: 150px;
-      right: 30px;
-      transform: scale(3.5);
-      accent-color: green;
-    }
-
-
-.navis-btn {
-    width: 100%;
-    height: 80px; /* Set desired height */
-    border: none;
-    background-image: url("tenor.gif");
-    background-repeat: repeat;
-    background-size: 160px; /* Or use 'contain', 'cover' if preferred */
-    background-position: center;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    font-size: 0; /* Hide text if using background only */
-  }
-
-  
   </style>
 </head>
 <body>
@@ -205,20 +137,21 @@
 <button class="navi-btn" onclick="pushToSheet(); resetCounter()">🔄 Reset Count</button>
 <button class="navi-btn" onclick="generateList()">🔃 Fetch</button>
 <br>
-<button class="navis-btn" onclick="playClickSound(); runNextContainer()">
- <!-- <img src="tenor.gif" alt="Walking animation" />-->
+<button class="navi-btn" style="width: 100%; font-size: 20px;" onclick="runNextContainer()">
+  ˚ʚ♡ɞ˚Next Cont˚ʚ♡ɞ˚
 </button>
  <!-- <button class="nav-btn" onclick="pushToSheet()">🔼 Push to Sheet</button> -->
 <br>
 <div id="userList">🔃 Loading data...</div>
 
 <!-- Navigation Controls -->
-
-<button id="btnPrev" class="floating-btn" onclick="prevUser(); pushToSheet(); openCurrentIG()">⬅️</button>
-<span id="currentUsername">—</span>
-<button id="btnIG" class="floating-btn" onclick="openCurrentIG()">IG</button>
-<input type="checkbox" id="currentCheckbox">
-<button id="btnNext" class="floating-btn" onclick="nextUser(); pushToSheet(); openCurrentIG()">➡️</button>
+<div id="navControls">
+  <button class="nav-btn" onclick="prevUser(); pushToSheet(); openCurrentIG()">⬅️</button>
+  <span id="currentUsername">—</span>
+  <button class="nav-btn" onclick="openCurrentIG()">IG</button>
+  <label><input type="checkbox" id="currentCheckbox"></label>
+  <button class="nav-btn" onclick="nextUser(); pushToSheet(); openCurrentIG()">➡️</button>
+</div>
 
 <!-- Counter -->
 <div id="floatingCounter">0</div>
@@ -228,9 +161,8 @@
 
 <!-- Sound -->
 <audio id="clickSound" preload="auto">
-  <source src="laser.wav" type="audio/wav">
+  <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YaQAAACAgICAgICAgICAgICAgICAf39/f39/f39/f3+AgICAgICAgICAf3+AgICAf3+AgICAgICAgH9/f3+AgH9/f3+AgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA=" type="audio/wav">
 </audio>
-
 
 <script>
 function runNextContainer() {
@@ -240,7 +172,7 @@ function Tunnelbear() {
     window.location.href = "shortcuts://run-shortcut?name=Tunnelbear";
   }
   
-const RAW_API = "https://script.google.com/macros/s/AKfycbytQ6_Wlf8cY2TFmHgPHjkPqNHej97lK1gAX6j2qR70y4FmdN8o5kHMR0bJXxBvHvVPww/exec";
+const RAW_API = "https://script.google.com/macros/s/AKfycbwIGZazoshJOx-1pL6u3K4Lr8hl9hpoxHngd4b2e0ljf9eyjHkCiPg8G4zZGVtdmtUJoQ/exec";
 const API_URL = "https://corsproxy.io/?" + encodeURIComponent(RAW_API);
 
 let currentUsers = [];
@@ -384,9 +316,6 @@ currentCheckbox.addEventListener("change", () => {
 function updateCounter() {
   counterEl.textContent = counterValue;
   counterEl.style.backgroundColor = counterValue >= 9 ? "red" : "green";
-
-  localStorage.setItem("counterValue", counterValue);
-  localStorage.setItem("countedNavChecks", JSON.stringify(Array.from(countedNavChecks)));
 }
 
 async function pushToSheet() {
@@ -435,43 +364,19 @@ function toast(msg) {
   }, 3000);
 }
 
-document.addEventListener("touchstart", playClickSound, { passive: true });
+document.addEventListener("click", playClickSound);
 document.addEventListener("change", e => {
   if (e.target.type === "checkbox") playClickSound();
 });
 
 function playClickSound() {
   const snd = document.getElementById("clickSound");
-  if (!snd) return;
-
-  try {
-    snd.pause();
+  if (snd) {
     snd.currentTime = 0;
     snd.play().catch(() => {});
-  } catch (e) {
-    console.warn("Audio play error:", e);
   }
 }
 
-// Use click for better iOS reliability
-document.addEventListener("click", e => {
-  if (e.target.tagName === "BUTTON" || e.target.type === "checkbox") {
-    playClickSound();
-  }
-});
-
-const savedCounter = parseInt(localStorage.getItem("counterValue"));
-if (!isNaN(savedCounter)) {
-  counterValue = savedCounter;
-}
-
-const savedChecks = localStorage.getItem("countedNavChecks");
-if (savedChecks) {
-  try {
-    countedNavChecks = new Set(JSON.parse(savedChecks));
-  } catch {}
-}
-  
 updateCounter();
 window.onload = generateList;
 </script>
